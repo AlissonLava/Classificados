@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+ .field_with_errors{
+    color: red;
+    display: inline-block;
+ }
+
+ .field_with_errors imput{
+     border: 3px solid red;
+ }

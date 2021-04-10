@@ -14,4 +14,13 @@ class SignupsTest < ApplicationSystemTestCase
 
     assert_text "Cadastro realizado com sucesso!"
   end
+
+  teste "usuário faz cadastro com dados inválidos" do
+    visit "/"
+    click_on "Cadastre-se"
+    click_on "Cadastrar"
+  end
+
+  # assert_equal
+  assert_text "Erro ao salvar!"
 end
