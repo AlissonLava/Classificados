@@ -1,26 +1,25 @@
 require "application_system_test_case"
 
 class SignupsTest < ApplicationSystemTestCase
-  teste "usuário faz o cadastro com dados dados válidos" do
+  test "usuario faz cadastro com dados validos" do
     visit "/"
     click_on "Cadastre-se"
 
-    fill_in "Nome", with: "nome001"
-    fill_in "E-mail", with: "nome001@mail.com"
-    fill_in "Senha", with: "senha001"
-    fill_in "Confirme sua senha", with: "senha001"
+    fill_in "Nome", with: "Darth Vader"
+    fill_in "E-mail", with: "vader@imperio.com"
+    fill_in "Senha", with: "minhasenha"
+    fill_in "Confirmação da Senha", with: "minhasenha"
 
     click_on "Cadastrar"
 
     assert_text "Cadastro realizado com sucesso!"
   end
 
-  teste "usuário faz cadastro com dados inválidos" do
+  test "usuari faz cadastro com dados invalidos" do
     visit "/"
     click_on "Cadastre-se"
     click_on "Cadastrar"
-  end
 
-  # assert_equal
-  assert_text "Erro ao salvar!"
+    assert_text "Erro ao salvar"
+  end
 end
